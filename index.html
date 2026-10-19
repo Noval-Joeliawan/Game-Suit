@@ -1,80 +1,102 @@
 <!doctype html>
-
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Suit Game</title>
+    <title>JANKEN DOJO // Suit Showdown</title>
+    <!-- Google Fonts: Russo One (Arcade Fighter Display) & Space Grotesk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Russo+One&family=Space+Grotesk:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="app">
+      <!-- HEADER DOJO -->
       <header>
-        <div class="logo">🎮</div>
-        <div>
-          <h1>Suit Game</h1>
+        <div class="logo">🥋</div>
+        <div class="header-title">
+          <span class="dojo-tag">TURBO DUEL // じゃんけん</span>
+          <h1>SUIT SHOWDOWN</h1>
           <p>Batu • Gunting • Kertas</p>
         </div>
       </header>
 
       <main>
+        <!-- PAPAN SKOR ALA FIGHTING GAME HUD -->
         <div class="score-board">
-          <div>
-            <span>Kamu</span>
+          <div class="fighter-box player-side">
+            <span>P1 // KAMU</span>
             <strong id="scorePlayer">0</strong>
           </div>
 
           <div class="vs">VS</div>
 
-          <div>
-            <span>Komputer</span>
+          <div class="fighter-box cpu-side">
+            <span>CPU // LAWAN</span>
             <strong id="scoreComputer">0</strong>
           </div>
         </div>
 
         <section class="game-area">
-          <h2 id="message">Pilih senjatamu!</h2>
+          <!-- Banner Pengumuman Ronde -->
+          <div class="announcer-banner">
+            <h2 id="message">Pilih senjatamu!</h2>
+          </div>
 
+          <!-- 3 Kartu Jurus / Senjata -->
           <div class="choices">
             <button class="choice" data-choice="batu">
+              <div class="choice-badge">JURUS 01</div>
               <span>🪨</span>
               <small>Batu</small>
             </button>
 
             <button class="choice" data-choice="gunting">
+              <div class="choice-badge">JURUS 02</div>
               <span>✂️</span>
               <small>Gunting</small>
             </button>
 
             <button class="choice" data-choice="kertas">
+              <div class="choice-badge">JURUS 03</div>
               <span>📄</span>
               <small>Kertas</small>
             </button>
           </div>
 
+          <!-- Arena Benturan (Clash Ring) -->
           <div class="result" id="result">
             <div class="player-choice">
-              <span id="playerIcon">❔</span>
+              <div class="icon-frame player-frame">
+                <span id="playerIcon">❔</span>
+              </div>
               <p>Kamu</p>
             </div>
 
             <div class="result-text">
-              <span id="resultTitle">VS</span>
+              <span id="resultTitle" class="status-idle">VS</span>
               <small id="resultDescription">Pilih salah satu</small>
             </div>
 
             <div class="computer-choice">
-              <span id="computerIcon">❔</span>
+              <div class="icon-frame cpu-frame">
+                <span id="computerIcon">❔</span>
+              </div>
               <p>Komputer</p>
             </div>
           </div>
 
-          <button class="reset-btn" id="resetBtn">Reset</button>
+          <!-- Tombol Reset Pertandingan -->
+          <button class="reset-btn" id="resetBtn">⚡ RESET PERTANDINGAN</button>
         </section>
       </main>
 
       <footer>
-        <p>© 2026 Suit Game</p>
+        <p>© 2026 JANKEN DOJO • ARCADE EDITION</p>
       </footer>
     </div>
 
